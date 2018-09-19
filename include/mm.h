@@ -10,8 +10,6 @@
 
 #define LOW_MEMORY              	(2 * SECTION_SIZE)
 
-#ifndef __ASSEMBLER__
-
 #include <stddef.h>
 
 void *memzero(void *src, size_t size);
