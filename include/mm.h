@@ -12,7 +12,17 @@
 
 #ifndef __ASSEMBLER__
 
-void memzero(unsigned long src, unsigned long n);
+#include <stddef.h>
+
+void *memzero(void *src, size_t size);
+
+void *memcpy(void *dst, const void *src, size_t size);
+
+void *memmove(void *dst, const void *src, size_t size);
+
+void *memset(void *src, int fill, size_t size);
+
+void *malloc(int size); // Not Implemented
 
 #endif
 
