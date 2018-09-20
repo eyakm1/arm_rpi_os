@@ -3,7 +3,6 @@
 
 #include <stddef.h>
 
-
 size_t strlen(const char *str);
 
 #endif /*__STRING_H__*/

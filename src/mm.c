@@ -21,9 +21,14 @@ void *memcpy(void *dst, const void *src, size_t size) {
 }
 
 
-void *memmove(void *dst, const void *src, size_t n) {
-    unsigned char buf[n];
-    memcpy(buf, src, n);
-    memcpy(dst, buf, n);
+void *memmove(void *dst, const void *src, size_t size) {
+    unsigned char buf[size];
+    memcpy(buf, src, size);
+    memcpy(dst, buf, size);
     return dst;
+}
+
+
+void *memzero(void *src, size_t size) {
+    return memset(src, 0, size);
 }
